@@ -9,20 +9,22 @@
 ## 🚀 快速启动
 
 ### 方式一：双击运行（推荐）
-双击项目根目录的 **`start_all.bat`**，自动启动后端 + 前端。
+双击项目根目录的 **`start_all.bat`**，自动启动后端 + 前端并打开浏览器。
 
 ### 方式二：命令行
-```powershell
+```bash
 cd 项目目录
-.\start_all.bat
+start_all.bat
 ```
 
+> ⚠️ 注意：如果中文显示乱码，请在命令行先运行 `chcp 65001` 再执行。
+
 ### 方式三：手动分别启动
-```powershell
-# 后端
+```bash
+# 后端（终端1）
 python -m uvicorn backend.app:app --host 0.0.0.0 --port 8001
 
-# 前端（新开终端）
+# 前端（终端2）
 python -m streamlit run frontend/app.py --server.headless=true
 ```
 
